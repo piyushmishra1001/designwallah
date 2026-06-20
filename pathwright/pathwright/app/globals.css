@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #10141c;
+  color: #f7f6f2;
+  font-family: "Inter", sans-serif;
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* rail connector for the flow steps */
+.rail {
+  position: relative;
+}
+
+.rail::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 44px;
+  bottom: -8px;
+  width: 1px;
+  background: linear-gradient(to bottom, #262d3a, #262d3a 90%, transparent);
+}
+
+.rail:last-child::before {
+  display: none;
+}
+
+::selection {
+  background: #e8a33d;
+  color: #10141c;
+}
