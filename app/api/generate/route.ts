@@ -47,7 +47,10 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const anthropic = new Anthropic({
+    apiKey: process.env.ANTHROPIC_API_KEY,
+    baseURL: process.env.ANTHROPIC_BASE_URL,
+  });
 
   try {
     const message = await anthropic.messages.create({
